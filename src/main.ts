@@ -1,5 +1,6 @@
 // src/main.ts
 import { ViteSSG } from 'vite-ssg'
+import NProgress from 'nprogress'
 import router from 'pages-generated'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
@@ -15,10 +16,13 @@ dayjs.extend(utc)
 const routes = [...router]
 
 export const createApp = ViteSSG(
-  // the root component
   App,
-  // vue-router options
   { routes },
-  // function to have custom setups
+  ({ router, isClient }) => {
+    if (isClient) {
+      router.beforeEach(() => { NProgress.start() })
+      router.afterEach(() => { NProgress.done() })
+    }
+  },
 )
 

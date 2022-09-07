@@ -5,16 +5,18 @@ const isDark = useDark()
 
 <template>
   <header text-center m-auto pt-30px pb-30px class="prose header">
-    <a href="/" text-20px class="title"> SURE WANG </a>
+    <router-link to="/" title="博客" class="text-20px title">
+      SURE WANG
+    </router-link>
 
     <div class="box" pt-15px>
-      <a href="/blogs" title="博客">
+      <router-link to="/blogs" title="博客">
         <div i-carbon:blog />
-      </a>
+      </router-link>
 
-      <a href="/notes" title="笔记">
+      <router-link to="/notes" title="笔记">
         <div i-gg:notes />
-      </a>
+      </router-link>
 
       <a target="_blank" href="https://github.com/ws1004" title="github">
         <div i-uil-github-alt />

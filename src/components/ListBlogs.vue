@@ -36,13 +36,15 @@ function isFirstDate(blog: any, blogs: any[]) {
         </span>
       </div>
 
-      <a :href="blog.path" relative>
-        <div text-25px>{{ blog.title }}</div>
+      <router-link :to="blog.path" relative>
+        <div text-25px>
+          {{ blog.title }}
+        </div>
         <div text-13px>
           <span>{{ blog.date }}</span>
           <span ml-20px>{{ blog.description }}</span>
         </div>
-      </a>
+      </router-link>
     </div>
   </template>
 </template>
