@@ -1,16 +1,23 @@
 <script setup lang="ts">
-const list = [
-  {
-    name: 'Dimple\'s blog',
-    desc: '人浮于世，蹒跚而行',
-    avatar: 'https://dimples-yanjie.oss-cn-beijing.aliyuncs.com/blog/img/QQ%E5%9B%BE%E7%89%8720201025032558.jpg',
-    link: 'https://dimples.top',
-  },
-]
+interface LinkItem {
+  name: string
+  desc: string
+  avatar: string
+  link: string
+}
+defineProps<{
+  links: LinkItem[]
+}>()
+
+function sortList(list: LinkItem[]) {
+  return list.sort((a: any, b: any) => {
+    return a.name[0].charCodeAt() - b.name[0].charCodeAt()
+  })
+}
 </script>
 
 <template>
-  <a v-for="(item, index) in list" :key="index" items-center flex :href="item.link" target="_blank">
+  <a v-for="(item, index) in sortList(links)" :key="index" items-center flex :href="item.link" target="_blank">
     <img inline-block h-60px :src="item.avatar" alt="">
     <span ml-20px> {{ item.name }}</span>
     <span ml-10px mr-10px>-</span>
