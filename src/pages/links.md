@@ -9,8 +9,8 @@ items: [
   {
     name: 'Ayy',
     desc: '临渊羡鱼，不如退而结网',
-    avatar: 'http://junyu.shop:1005/storage/users/uid-1/1662963728.jpg',
-    link: 'https://http://junyu.shop:1006',
+    avatar: 'https://q1.qlogo.cn/g?b=qq&s=100&nk=2510186180',
+    link: 'http://junyu.shop:1006',
   }
 ]
 ---
