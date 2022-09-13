@@ -14,6 +14,3 @@ declare module 'vue-router' {
   }
 }
 
-declare module 'dayjs-plugin-utc' {
-   dayjsPluginUTC: any
-}

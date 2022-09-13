@@ -18,11 +18,15 @@ const isDark = useDark()
         <div i-gg:notes />
       </router-link>
 
+      <router-link to="/links" title="友情链接">
+        <div i-cib:amazon />
+      </router-link>
+
+      <a href="#" dark:i-carbon-moon i-carbon-sun @click="isDark = !isDark" />
+
       <a target="_blank" href="https://github.com/ws1004" title="github">
         <div i-uil-github-alt />
       </a>
-
-      <a href="#" dark:i-carbon-moon i-carbon-sun @click="isDark = !isDark" />
     </div>
   </header>
 </template>
