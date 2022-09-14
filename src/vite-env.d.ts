@@ -8,3 +8,12 @@ declare module '*.vue' {
 }
 
 
+declare module 'vue-router' {
+  interface RouteMeta {
+    frontmatter: any
+  }
+}
+
+
+declare module 'markdown-it-table-of-contents'
+

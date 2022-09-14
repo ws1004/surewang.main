@@ -37,7 +37,7 @@ const isDark = useDark()
     letter-spacing: 5px;
   }
   a {
-    padding: 0 5px;
+    padding: 0 7px;
     border-bottom:none
   }
 
