@@ -6,6 +6,10 @@ const { frontmatter } = defineProps({
     required: true,
   },
 })
+
+const headTitle = frontmatter.headTitle
+if (headTitle)
+  useTitle().value = headTitle
 </script>
 
 <template>

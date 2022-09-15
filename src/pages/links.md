@@ -1,4 +1,5 @@
 ---
+headTitle: '友情链接'
 items: [
   {
     name: 'Dimple',
