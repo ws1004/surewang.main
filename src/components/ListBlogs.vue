@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import router from 'pages-generated'
-import { formatData } from '@/utils'
+import { formatDate } from '@/utils'
 
 const pathBase = '/blogs/'
 const blogs = router.filter(item => item.path.match(pathBase)).map((item) => {
@@ -8,8 +8,8 @@ const blogs = router.filter(item => item.path.match(pathBase)).map((item) => {
 
   return {
     path,
-    date: formatData(meta?.frontmatter.date),
-    year: formatData(meta?.frontmatter.date, 'YYYY'),
+    date: formatDate(meta?.frontmatter.date),
+    year: formatDate(meta?.frontmatter.date, 'YYYY'),
     title: meta?.frontmatter.title,
     description: meta?.frontmatter.description,
     tag: meta?.frontmatter.tag || [],
